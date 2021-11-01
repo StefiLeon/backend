@@ -12,13 +12,16 @@ class Usuario {
     addMascota(mascota){
         this.mascotas.push(mascota);
         console.log(this.mascotas);
+        return this.mascotas;
     }
     countMascotas(){
         console.log(this.mascotas.length);
+        return this.mascotas.length;
     }
     addBook({Nombre, Autor}){
         this.libros.push({Nombre, Autor});
         console.log(this.libros);
+        return this.libros;
     }
     getBookNames(){
         let nombresDeLibros = []
@@ -26,6 +29,7 @@ class Usuario {
             nombresDeLibros.push(this.libros[i].Nombre);
         }
         console.log(nombresDeLibros);
+        return nombresDeLibros;
     }
 }
 
@@ -35,4 +39,3 @@ usuario1.addMascota('Pepe');
 usuario1.countMascotas();
 usuario1.addBook({Nombre:'Harry Potter', Autor:'J.K.Rowling'})
 usuario1.getBookNames();
-
